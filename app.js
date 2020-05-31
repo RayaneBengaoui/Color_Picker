@@ -12,6 +12,7 @@ function generateHex() {
   return hexColor;
 }
 
+//Color divs modifier
 function randomColors() {
   colorDivs.forEach((div, index) => {
     const hexText = div.children[0];
@@ -20,7 +21,19 @@ function randomColors() {
     //Add the color to the background
     div.style.backgroundColor = randomColor;
     hexText.innerText = randomColor;
+
+    //Check for contrast on backgroundcolor/text
+    checkTextContrast(randomColor, hexText);
   });
+}
+
+function checkTextContrast(color, text) {
+  const luminance = chroma(color).luminance();
+  if (luminance > 0.5) {
+    text.style.color = "black";
+  } else {
+    text.style.color = "white";
+  }
 }
 
 randomColors();
