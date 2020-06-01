@@ -129,4 +129,5 @@ input[type="range"] {
   width: 100%;
   position: relative;
   border-radius: 1rem;
+  cursor: pointer;
 }
