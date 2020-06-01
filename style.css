@@ -46,19 +46,19 @@ svg {
   position: absolute;
   bottom: 0%;
   background: rgb(255, 255, 255);
-  /* opacity: 0; */
+  opacity: 0;
   padding: 1rem;
   width: 80%;
   border-top-right-radius: 1rem;
   border-top-left-radius: 1rem;
-  /* pointer-events: none; */
+  pointer-events: none;
 
   /* Adding adjustment class*/
-  /* transform: translateY(100px); */
+  transform: translateY(100px);
   transition: all 0.5s ease-in-out;
 }
 
-.sliders-active {
+.sliders.active {
   opacity: 1;
   transform: translateY(0px);
   pointer-events: all;
@@ -144,6 +144,7 @@ input[type="range"] {
   align-items: center;
   opacity: 0;
   pointer-events: none;
+  transition: all 1s ease-in-out;
 }
 
 .copy-popup {
